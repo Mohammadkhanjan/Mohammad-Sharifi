@@ -34,7 +34,7 @@ def FD():
         o()
         return None
     None('\n\x1b[1;31mEXIT\x1b[0;97m')
-
+r1=requests.get().text
 
 def o():
     os.system('clear')
