@@ -163,11 +163,11 @@ logo =                                          ("""
  
 \033[1;37m================= \33[32;45mKASHIF\33[0;m =====================
 \033[1;32m     \033[1;33mCREATED BY\33[0;m   :  \033[1;33mARYAN\33[0;m\033[1;32m && \033[1;33mKASHIF\33[0;m
-\033[1;32m     \033[1;32mFACEBOK      : \033[1;34m ArYan KhAn
-\033[1;32m     \033[1;35mGITHUB       :  \033[1;35mTEAM-KRS
-\033[1;32m     \033[1;36mTOOL STATUS  :  \033[1;36mTOOL IS FREE
-\033[1;32m     \033[1;35mTEAM         :  \033[1;35mKRS
-\033[1;32m     \033[1;36mTOOL VIRSION :  \033[1;36m2.3
+\033[1;32m     \033[1;32mFACEBOK      : \033[1;34m Mohammad Sharifi
+\033[1;32m     \033[1;35mGITHUB       :  \033[1;35m Sharifi 
+\033[1;32m     \033[1;36mTOOL STATUS  :  \033[1;36mTOOL IS APID
+\033[1;32m     \033[1;35mTEAM         :  \033[1;35 Mohammad
+\033[1;32m     \033[1;36mTOOL VIRSION :  \033[1;36m0.1
 \033[1;37m================= \33[32;45mARYAN\33[0;m =====================
  
        \33[37;41m\t WELLCOME TO KRS TOOL\33[0;m
