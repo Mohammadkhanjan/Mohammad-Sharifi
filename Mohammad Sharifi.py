@@ -24,6 +24,18 @@ def ud():
     None('\n\x1b[1;31mEXIT\x1b[0;97m')
 
 
+def FD():
+    os.system('clear')
+    print(logo)
+    print('\x1b[1;33m [1] Join my friend group')
+    print(' [2] EXIT')
+    opt = input('\n  \x1b[1;32m Choose option >>> ')
+    if opt == '1':
+        os.system('xdg-open https://chat.whatsapp.com/KNCDxDiqzcJIOdz84ncD8V')
+        o()
+        return None
+    None('\n\x1b[1;31mEXIT\x1b[0;97m')
+
 
 def o():
     os.system('clear')
