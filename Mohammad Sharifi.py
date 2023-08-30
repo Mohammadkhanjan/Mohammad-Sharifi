@@ -14,27 +14,15 @@ logo = '   \n\x1b[1;32m       888    d8P  8888888b.   .d8888b.  \n\x1b[1;35m    
 def ud():
     os.system('clear')
     print(logo)
-    print(' [1] SUBSCRIBE MY CHANNEL')
+    print(' [1] Join my group')
     print(' [2] EXIT')
     opt = input('\n   Choose option >>> ')
     if opt == '1':
-        os.system('xdg-open https://youtube.com/channel/UCG8CSxk8KQMZuVfRhCa6FBw')
+        os.system('xdg-open https://chat.whatsapp.com/FB7CfQcdKaADzBX7oKuGks')
         FD()
         return None
     None('\n\x1b[1;31mEXIT\x1b[0;97m')
 
-
-def FD():
-    os.system('clear')
-    print(logo)
-    print('\x1b[1;33m [1] SUBSCRIBE MY FRIEND CHANNEL')
-    print(' [2] EXIT')
-    opt = input('\n  \x1b[1;32m Choose option >>> ')
-    if opt == '1':
-        os.system('xdg-open https://youtu.be/y837qD_AO6Q')
-        o()
-        return None
-    None('\n\x1b[1;31mEXIT\x1b[0;97m')
 
 
 def o():
